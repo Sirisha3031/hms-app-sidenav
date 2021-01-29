@@ -2,7 +2,7 @@ import React from 'react'
 
 function Inpatient() {
     return (
-        <div>
+        <div className="App">
             <h1>Inpatient</h1>
         </div>
     )

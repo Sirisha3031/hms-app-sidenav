@@ -1,33 +1,34 @@
-import React, { Component } from "react";
+import '../App.css'
+import './LoginPage.css';
+import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
-export default class Login extends Component {
-    render() {
-        return (
-            <form>
-                <h3>Sign In</h3>
 
-                <div className="form-group">
-                    <label>Email address</label>
-                    <input type="email" className="form-control" placeholder="Enter email" />
-                </div>
+function LoginPage() {
 
-                <div className="form-group">
-                    <label>Password</label>
-                    <input type="password" className="form-control" placeholder="Enter password" />
-                </div>
+  const history = useHistory();
+  const handleSubmit = () => history.push('/home')
+   
+  return (
+    <form className="App">
+      <div className="form-inner">
+        <h2>Login</h2>
+        {/*ERROR*/}
+        <div className="form-group">
+          <label htmlFor="email">Email:</label>
+          <input type="email" name="email" id="email" />
+        </div>
+        <div className="form-group">
+          <label htmlFor="password">Password:</label>
+          <input type="password" name="password" id="password" />
+        </div>
+        <input type="submit" value="Login" onClick={handleSubmit}/>
 
-                <div className="form-group">
-                    <div className="custom-control custom-checkbox">
-                        <input type="checkbox" className="custom-control-input" id="customCheck1" />
-                        <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
-                    </div>
-                </div>
-
-                <button type="submit" className="btn btn-primary btn-block">Submit</button>
-                <p className="forgot-password text-right">
-                    Forgot <a href="#">password?</a>
-                </p>
-            </form>
-        );
-    }
+        
+      </div>
+    </form>
+  );
 }
+export default LoginPage;
+
+

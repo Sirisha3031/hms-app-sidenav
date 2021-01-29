@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 .App {
-  text-align: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #53565A;
 }
 
 .centered {
@@ -24,4 +28,22 @@ height: 90vh;
 align-items: center;
 justify-content: center;
 font-size: 3rem;
+}
+
+nav{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;
+  background: rgb(135, 178, 192);
+  color: white;
+}
+.nav-links {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+
 }
